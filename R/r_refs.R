@@ -33,7 +33,7 @@
 #'   specified in `type_pref`. By default, available articles are cited rather
 #'   than books. If no reference of the specified types is available, or if
 #'   multiple references of the preferred type are given all of them are cited
-#'   (and a warning is generated). Finally, if no `CITATION` file exists a
+#'   (and a message is generated). Finally, if no `CITATION` file exists a
 #'   reference is generated from the `DESCRIPTION` file by
 #'   \code{\link[utils]{citation}}.
 #' @return Invisibly returns the bibliography written to `file`.

@@ -8,8 +8,10 @@ test_that(
     library("papaja")
     library("rmarkdown")
 
-    r_refs("./test_cite_r_all.bib", type_pref = "not-available", tweak = TRUE, append = FALSE)
-    r_refs("./test_cite_r_preferred.bib", type_pref = "Article", tweak = TRUE, append = FALSE)
-    r_refs("./test_cite_r_preferred.bib", type_pref = c("Book", "Article"), tweak = TRUE, append = FALSE)
+    cite_r_all  <- tempfile(fileext = ".bib")
+    r_refs(cite_r_all, type_pref = "not-available", tweak = TRUE, append = FALSE)
+    cite_r_preferred  <- tempfile(fileext = ".bib")
+    r_refs(cite_r_preferred, type_pref = "Article", tweak = TRUE, append = FALSE)
+    r_refs(cite_r_preferred, type_pref = c("Book", "Article"), tweak = TRUE, append = FALSE)
   }
 )
